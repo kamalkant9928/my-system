@@ -33,3 +33,4 @@ if st.button("Predict"):
         st.success("✅ You will PASS")
     else:
         st.error("❌ You will FAIL")
+st,write("HAVE A GREAT DAY MR.KAMALKANT PRAJAPATI")
