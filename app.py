@@ -35,7 +35,7 @@ if st.button("Predict"):
         st.error("❌ You will FAIL")
 st.write("HAVE A GREAT DAY MR.KAMALKANT PRAJAPATI")
 x=st.number_input('enter a number do you want')
-if st.button('list of students'):
+if st.button('click to know rated'):
     if x>10:
         st.success("good luck")
     else:
