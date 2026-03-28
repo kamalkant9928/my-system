@@ -37,6 +37,6 @@ st.write("HAVE A GREAT DAY MR.KAMALKANT PRAJAPATI")
 x=st.number_input('enter a number do you want')
 if st.button('list of students'):
     if x>10:
-        print("good luck")
+        st.success("good luck")
     else:
-        print("badluck")
+        st.error("badluck")
