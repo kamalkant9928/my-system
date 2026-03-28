@@ -34,3 +34,9 @@ if st.button("Predict"):
     else:
         st.error("❌ You will FAIL")
 st.write("HAVE A GREAT DAY MR.KAMALKANT PRAJAPATI")
+if st.button('list of students'):
+    x=int(input())
+    if x>10:
+        print("good luck")
+    else:
+        print("badluck")
