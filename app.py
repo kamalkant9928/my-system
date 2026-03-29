@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 
 st.title("📊 Simple ML Model (Pass/Fail Prediction)")
-st.title("KAMALKANT 📊 PRAJAPATI")
+st.title("#######************##########")
 
 # -----------------------------
 # Step 1: Train model on the fly
