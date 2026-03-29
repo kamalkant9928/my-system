@@ -31,12 +31,9 @@ if st.button("Predict"):
 
     if prediction[0] == 1:
         st.success("✅ You will PASS")
+        st.success("HAVE A GREAT DAY")
     else:
         st.error("❌ You will FAIL")
-st.write("HAVE A GREAT DAY MR.KAMALKANT PRAJAPATI")
-x=st.number_input('enter a number do you want')
-if st.button('click to know rated'):
-    if x>10:
-        st.success("good luck")
-    else:
-        st.error("badluck")
+        st.success("Do work Hardly")
+
+
