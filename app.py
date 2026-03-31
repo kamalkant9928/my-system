@@ -8,8 +8,24 @@ import matplotlib.pyplot as plt
 # Page Config
 # -----------------------------
 st.set_page_config(page_title="Student Predictor", layout="centered")
+st.markdown("""
+    <style>
+    .stApp {
+        background: url("dashboard.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 
-st.image("dashboard.webp", caption="Healthcare Dashboard UI", use_container_width=True)
+    .main-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # -----------------------------
 # Login System
