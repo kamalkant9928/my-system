@@ -8,7 +8,20 @@ import matplotlib.pyplot as plt
 # Page Config
 # -----------------------------
 st.set_page_config(page_title="Student Predictor", layout="centered")
-
+st.markdown("""
+<div style="
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.2);
+    margin-top:20px;
+">
+    <h2 style="color:#2c3e50;">🏥 Medical Dashboard</h2>
+    <p>Total Patients: 1245</p>
+    <p>Appointments: 320</p>
+    <p>Doctors: 58</p>
+</div>
+""", unsafe_allow_html=True)
 # -----------------------------
 # Login System
 # -----------------------------
