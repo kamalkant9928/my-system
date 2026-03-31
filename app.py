@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # -----------------------------
 st.set_page_config(page_title="Student Predictor", layout="centered")
 
- st.image("dashboard.webp", caption="Healthcare Dashboard UI", use_container_width=True)
+st.image("dashboard.webp", caption="Healthcare Dashboard UI", use_container_width=True)
 
 # -----------------------------
 # Login System
