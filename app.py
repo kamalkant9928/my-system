@@ -8,10 +8,17 @@ import matplotlib.pyplot as plt
 # Page Config
 # -----------------------------
 st.set_page_config(page_title="Student Predictor", layout="centered")
+
+# -----------------------------
+# Unified Premium CSS with Background
+# -----------------------------
 st.markdown("""
     <style>
     .stApp {
-        background: url("dashboard.webp");
+        background: linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.35)
+        ), url("dashboard.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -23,6 +30,15 @@ st.markdown("""
         font-size: 40px;
         font-weight: bold;
         color: white;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: rgba(255,255,255,0.9);
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -49,30 +65,6 @@ if "logged_in" not in st.session_state:
 if not st.session_state["logged_in"]:
     login()
     st.stop()
-
-# -----------------------------
-# Custom CSS (Gradient UI)
-# -----------------------------
-st.markdown("""
-    <style>
-    body {
-        background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    }
-    .main-title {
-        text-align: center;
-        font-size: 40px;
-        font-weight: bold;
-        color: #2c3e50;
-    }
-    .card {
-        padding: 20px;
-        border-radius: 15px;
-        background-color: white;
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-        text-align: center;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 # -----------------------------
 # Title
@@ -113,19 +105,25 @@ if st.button("🔍 Predict"):
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.write(f"### 📊 Passing Probability: {confidence:.2f}%")
 
-    # -----------------------------
-    # Running Animation (GIF)
-    # -----------------------------
-    st.image("https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif", caption="Keep Running Towards Success 🏃‍♂️")
+    st.image(
+        "https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif",
+        caption="Keep Running Towards Success 🏃‍♂️"
+    )
 
     if prediction[0] == 1:
         st.success("✅ You will PASS 🎉")
-        st.image("https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
-                 caption="Success Garden 🌿", use_container_width=True)
+        st.image(
+            "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
+            caption="Success Garden 🌿",
+            use_container_width=True
+        )
     else:
         st.error("❌ You will FAIL")
-        st.image("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-                 caption="Hard Work Rock 🪨", use_container_width=True)
+        st.image(
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+            caption="Hard Work Rock 🪨",
+            use_container_width=True
+        )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -134,8 +132,8 @@ if st.button("🔍 Predict"):
     # -----------------------------
     st.subheader("📈 Probability vs Study Hours")
 
-    hours_range = np.linspace(0, 10, 100).reshape(-1,1)
-    probs = model.predict_proba(hours_range)[:,1]
+    hours_range = np.linspace(0, 10, 100).reshape(-1, 1)
+    probs = model.predict_proba(hours_range)[:, 1]
 
     fig, ax = plt.subplots()
     ax.plot(hours_range, probs)
